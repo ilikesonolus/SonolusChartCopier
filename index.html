@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sonolus Chart Copier</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Sonolus Chart Copier</h1>
+      <p class="subtitle">Copy chart payloads from any Sonolus-compatible server.</p>
+
+      <section class="card">
+        <h2>Source</h2>
+        <label>
+          Sonolus server URL
+          <input id="serverUrl" type="url" placeholder="https://sonolus.example.com" />
+        </label>
+        <label>
+          Level name or URL
+          <input id="levelInput" type="text" placeholder="starlight-master or https://.../levels/starlight-master" />
+        </label>
+        <label>
+          Optional CORS proxy
+          <input id="proxyInput" type="url" placeholder="https://my-proxy.example.com/" />
+        </label>
+        <div class="actions">
+          <button id="loadButton">Load Chart</button>
+          <button id="copyButton" disabled>Copy Chart JSON</button>
+          <button id="downloadButton" disabled>Download JSON</button>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Result</h2>
+        <p id="status" class="status">Enter a server and chart name to start.</p>
+        <details>
+          <summary>Detected metadata</summary>
+          <pre id="metadata">No chart loaded.</pre>
+        </details>
+        <details open>
+          <summary>Chart JSON</summary>
+          <pre id="jsonOutput">No chart loaded.</pre>
+        </details>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
