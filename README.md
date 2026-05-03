@@ -6,8 +6,8 @@ A small web app for copying chart JSON from Sonolus-compatible servers.
 
 - Works with **custom Sonolus server URLs** (not hardcoded to one host).
 - Accepts either a plain level name (`my-chart`) or a full level URL.
-- Tries multiple common API routes to support different Sonolus server setups.
-- Copy loaded chart JSON to clipboard or download it as a `.json` file.
+- Tries multiple common API routes to support different Sonolus server setups (including path-prefixed servers like `/next-sekai/`).
+- Resolves and fetches chart resource JSON when `data` points to a resource URL/object, then supports copy/download.
 - Optional CORS proxy input for servers that block browser-origin requests.
 
 ## Run
